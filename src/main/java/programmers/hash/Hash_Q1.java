@@ -1,6 +1,7 @@
+package programmers.hash;
+
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 public class Hash_Q1 {
 
