@@ -20,6 +20,7 @@ public class String_Q5 {
         char[] c = str.toCharArray();
         int i=0;
         int len = str.length()-1;
+
         while(i < len) {
 //            if(Character.isAlphabetic(c[i]) && Character.isAlphabetic(c[len])){
 //                char temp = c[len];
