@@ -9,7 +9,9 @@ public class String_Q9 {
 
         String str = sc.next();
 
-        System.out.println(q.solution(str));
+//        System.out.println(q.solution(str));
+//        System.out.println(q.solution2(str));
+        System.out.println(String.valueOf(q.solution3(str)));
     }
 
     private int solution(String str) {
@@ -22,5 +24,28 @@ public class String_Q9 {
         return answer;
     }
 
+    private int solution2(String str){
+        int answer = 0;
+
+        for(char a : str.toCharArray()){
+            if (a >=48 && a<= 57){
+                answer = answer * 10 + (a - 48) ;
+            }
+        }
+
+        return answer ;
+    }
+
+    private int solution3(String str){
+        int answer = 0;
+
+        for(char a : str.toCharArray()){
+            if (Character.isDigit(a)){
+                answer+= a;
+            }
+        }
+
+        return answer ;
+    }
 
 }

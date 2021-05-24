@@ -21,9 +21,9 @@ public class String_Q12 {
 
         size = size * 7 ;
         for(int i=0 ; i<size ; i= i+7){
-            String tmp = secret.substring(i,i+7);
-            tmp= tmp.replaceAll("[#]","1");
-            tmp= tmp.replaceAll("[*]","0");
+            String tmp = secret.substring(i,i+7).replace('#','1').replace('*','0');
+//            tmp= tmp.replaceAll("[#]","1");
+//            tmp= tmp.replaceAll("[*]","0");
             int a = Integer.parseInt(tmp,2);
             char b = (char) a;
             answer += String.valueOf(b);
