@@ -9,6 +9,27 @@ public class Array_Q5 {
         int flag = sc.nextInt();
 
         System.out.println(q.solution(flag));
+        System.out.println(q.solution2(flag));
+    }
+
+    /**
+     * 에라토스테네스채
+     * 처음 시작 숫자를 소수로 취급
+     * 기준의 배수들은 배제한다.
+     */
+    private int solution2(int flag){
+        int answer = 0;
+        int[] ch = new int[flag+1];
+        for(int i=2; i<= flag ; i++){
+            if(ch[i] ==0 ){
+                answer ++;
+                for(int j=i ; j<=flag ;j=j+i){
+                    ch[j] = 1;
+                }
+            }
+        }
+
+        return answer;
     }
     private int solution(int flag){
         int answer = 0;
